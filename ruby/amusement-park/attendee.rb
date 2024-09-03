@@ -4,7 +4,7 @@ class Attendee
   end
 
   def height
-    return @height #might aswell be explicit
+    return @height # might aswell be explicit
   end
 
   def pass_id
