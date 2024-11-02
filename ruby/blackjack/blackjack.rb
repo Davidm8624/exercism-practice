@@ -45,16 +45,15 @@ module Blackjack
   def self.first_turn(card1, card2, dealer_card)
     hand = card_range(card1, card2)
     dealer_value = parse_card(dealer_card)
-    case
-    when [card1, card2] == ['ace', 'ace']
+    if [card1, card2] == %w[ace ace]
       'P'
-    when hand == 'blackjack'
+    elsif hand == 'blackjack'
       dealer_value < 10 ? 'W' : 'S'
-    when hand == 'high'
+    elsif hand == 'high'
       'S'
-    when hand == 'mid'
+    elsif hand == 'mid'
       dealer_value >= 7 ? 'H' : 'S'
-    when hand == 'low'
+    elsif hand == 'low'
       'H'
     end
   end

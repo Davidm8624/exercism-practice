@@ -8,7 +8,7 @@ class LogLineParser
   end
 
   def log_level
-    @line.split(':')[0].strip.downcase.delete("[]")
+    @line.split(':')[0].strip.downcase.delete('[]')
   end
 
   def reformat

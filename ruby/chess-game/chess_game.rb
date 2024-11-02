@@ -2,7 +2,7 @@ module Chess
   # TODO: define the 'RANKS' constant
   RANKS = (1..8)
   # TODO: define the 'FILES' constant
-  FILES = ("A".."H")
+  FILES = ('A'..'H')
 
   def self.valid_square?(rank, file)
     RANKS.include?(rank) && FILES.include?(file)
@@ -13,10 +13,8 @@ module Chess
   end
 
   def self.move_message(first_name, last_name, square)
-    if valid_square?(square[1].to_i, square[0])
-      return "#{nick_name(first_name, last_name)} moved to #{square}"
-    else
-      return "#{nick_name(first_name, last_name)} attempted to move to #{square}, but that is not a valid square"
-    end
+    return "#{nick_name(first_name, last_name)} moved to #{square}" if valid_square?(square[1].to_i, square[0])
+
+    "#{nick_name(first_name, last_name)} attempted to move to #{square}, but that is not a valid square"
   end
 end

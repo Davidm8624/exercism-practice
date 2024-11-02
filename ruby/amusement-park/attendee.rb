@@ -3,12 +3,10 @@ class Attendee
     @height = height
   end
 
-  def height
-    return @height # might aswell be explicit
-  end
+  attr_reader :height
 
   def pass_id
-    return @id
+    @id
   end
 
   def issue_pass!(pass_id)

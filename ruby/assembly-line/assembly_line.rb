@@ -18,10 +18,10 @@ class AssemblyLine
   end
 
   def production_rate_per_hour
-    return (CARS * @speed) * success_rate
+    (CARS * @speed) * success_rate
   end
 
   def working_items_per_minute
-    return (production_rate_per_hour / 60).to_i
+    (production_rate_per_hour / 60).to_i
   end
 end

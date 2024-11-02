@@ -3,7 +3,7 @@ class BirdCount
     raise 'Please implement the BirdCount.last_week method'
   end
 
-  def initialize(birds_per_day)
+  def initialize(_birds_per_day)
     raise 'Please implement the BirdCount#initialize method'
   end
 
