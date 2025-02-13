@@ -14,26 +14,20 @@ class Attendee
   # Do not edit above methods, add your own methods below.
 
   def has_pass?
-    if (@pass_id == nil)
-      return false
-    else
-      return true
-    end
+    return false if @pass_id.nil?
+
+    true
   end
 
   def fits_ride?(ride_minimum_height)
-    if (@height >= ride_minimum_height)
-      return true
-    else
-      return false
-    end
+    return true if @height >= ride_minimum_height
+
+    false
   end
 
   def allowed_to_ride?(ride_minimum_height)
-    if (has_pass? && fits_ride?(ride_minimum_height))
-      return true
-    else
-      return false
-    end
+    return true if has_pass? && fits_ride?(ride_minimum_height)
+
+    false
   end
 end
