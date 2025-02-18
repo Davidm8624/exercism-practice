@@ -10,11 +10,11 @@ class LocomotiveEngineer
     return [third, *missing_wagons, *rest, first, second]
   end
 
-  def self.add_missing_stops
-    raise 'Please implement the LocomotiveEngineer.add_missing_stops method'
+  def self.add_missing_stops(route, **stops)
+    return {**route, stops: stops.values}
   end
 
   def self.extend_route_information(route, more_route_information)
-    raise 'Please implement the LocomotiveEngineer.extend_route_information method'
+    return {**route, **more_route_information }
   end
 end
